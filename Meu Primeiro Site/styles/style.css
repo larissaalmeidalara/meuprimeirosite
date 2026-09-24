@@ -44,7 +44,14 @@ h1 span { color: var(--rose); }
 .section h2 { color: var(--wine); font-size: clamp(2rem, 4vw, 3.3rem); margin-bottom: 1rem; }
 .cards-section { width: min(1120px, 92%); }
 .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
-.card { padding: 2rem; border-radius: 20px; background: #fff; box-shadow: var(--shadow); text-align: left; }
-.card span { color: var(--wine); font-size: 2rem; }.card h3 { color: var(--wine-dark); margin: .5rem 0; }.card p { color: #765c65; }
+.card { overflow: hidden; border-radius: 20px; background: #fff; box-shadow: var(--shadow); text-align: left; transition: transform .3s, box-shadow .3s; }
+.card:hover { transform: translateY(-8px); box-shadow: 0 24px 50px rgba(64, 13, 36, .25); }
+.card-image { display: block; width: 100%; height: 190px; object-fit: cover; transition: transform .45s; }
+.card:hover .card-image { transform: scale(1.06); }
+.card-image-ideas { object-position: center 35%; filter: sepia(.12) saturate(1.15); }
+.card-image-projects { object-position: center center; filter: hue-rotate(8deg) saturate(1.08); }
+.card-image-connections { object-position: 70% center; filter: sepia(.2) saturate(1.25) hue-rotate(300deg); }
+.card-content { padding: 1.5rem 2rem 2rem; }
+.card-content > span { color: var(--wine); font-size: 2rem; }.card h3 { color: var(--wine-dark); margin: .5rem 0; }.card p { color: #765c65; }
 .contact-section { padding-top: 3rem; padding-bottom: 7rem; }.contact-section .button { margin-top: 1.5rem; }
 footer { padding: 2rem; background: var(--wine-dark); color: #ffe9e9; text-align: center; font-size: .85rem; }
