@@ -4,66 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meu primeiro site">
     <title>Meu Primeiro Site</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caudex:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/mobile.css">
 </head>
 
 <body>
+    <header class="hero" id="inicio">
+        <nav class="navbar" id="nav-esquerdo" aria-label="Navegação principal">
+            <a class="brand" href="#inicio" aria-label="Voltar para o início">
+                <img src="./imagen/istockphoto-594473426-612x612.jpg" alt="Logo do site" class="brand-logo">
+                <span>Meu Site</span>
+            </a>
 
-    <!-- Parte de cima do site -->
-    <header>
-        <nav id="nav-esquerdo">
+            <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-            <div id="logo">
-                <img src="imagen/istockphoto-594473426-612x612.jpg" alt="Logo">
-            </div>
-
-            <ul id="icone-menu">
-                <li id="menu">
-                    <ion-icon name="menu-outline"></ion-icon>
-                </li>
-
-                <li id="menux">
-                    <ion-icon name="close-outline"></ion-icon>
-                </li>
+            <ul class="menu" id="menu-principal">
+                <li><a class="active" href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a class="menu-contact" href="#contato">Contato</a></li>
             </ul>
-
-            <ul id="menu-principal">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-
         </nav>
+
+        <div class="hero-content">
+            <p class="eyebrow">Olá, seja bem-vinda(o)</p>
+            <h1>Um espaço feito<br>com <span>criatividade</span>.</h1>
+            <p class="hero-text">Descubra um site leve, acolhedor e criado para compartilhar ideias, projetos e inspiração.</p>
+            <a class="button" href="#sobre">Conheça mais <span aria-hidden="true">→</span></a>
+        </div>
     </header>
 
     <main>
+        <section class="section" id="sobre">
+            <p class="eyebrow">Sobre o projeto</p>
+            <h2>Uma presença digital com a sua personalidade</h2>
+            <p>Este é o meu primeiro site, desenvolvido para praticar e evoluir em HTML, CSS e JavaScript.</p>
+        </section>
+
+        <section class="section cards-section" id="servicos">
+            <p class="eyebrow">O que você encontra</p>
+            <div class="cards">
+                <article class="card"><span>✦</span><h3>Ideias</h3><p>Conteúdos criativos e inspiradores.</p></article>
+                <article class="card"><span>◌</span><h3>Projetos</h3><p>Experiências construídas com carinho.</p></article>
+                <article class="card"><span>♡</span><h3>Conexões</h3><p>Um espaço aberto para conversar.</p></article>
+            </div>
+        </section>
+
+        <section class="section" id="blog">
+            <p class="eyebrow">Blog</p>
+            <h2>Novidades em breve</h2>
+        </section>
+
+        <section class="section contact-section" id="contato">
+            <p class="eyebrow">Vamos conversar?</p>
+            <h2>Entre em contato</h2>
+            <a class="button" href="mailto:seuemail@email.com">Enviar mensagem <span aria-hidden="true">→</span></a>
+        </section>
     </main>
 
-    <!-- Rodapé -->
-    <footer>
-    </footer>
+    <footer><p>© 2025 Meu Primeiro Site · Feito com carinho</p></footer>
 
-    <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Waypoints -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-
-    <!-- Sticky -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/sticky.min.js"></script>
-
-    <!-- Seu JavaScript -->
-    ./scripts/index.jsscript>
-
-    <!-- Ionicons -->
-    https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.jsscript>
-    https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.jsscript>
-
+    <script src="./scripts/script.js"></script>
 </body>
 
 </html>

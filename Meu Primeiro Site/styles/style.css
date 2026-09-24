@@ -1,153 +1,50 @@
-/*
-#742400
-#401D0D
-#D98057
-#FFB999
-#FFDCCC
-#E7CCFF
-#CF99FF
-#FFCCE3
-#740035
-#400D24
-#FF99AF
-#C999FF
+@import url('https://fonts.googleapis.com/css2?family=Caudex:wght@400;700&family=Inter:wght@400;500;600;700&display=swap');
 
-font-family: "Grenze Gotisch", serif;
-font-optical-sizing: auto;
-font-weight: <weight>;
-font-style: normal;
-
-.miltonian-tattoo-regular {
-  font-family: "Miltonian Tattoo", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.caudex-regular {
-  font-family: "Caudex", serif;
-  font-weight: 400;
-  font-style: normal;
+:root {
+    --wine: #740035;
+    --wine-dark: #400d24;
+    --rose: #ff99af;
+    --cream: #fff8f5;
+    --peach: #ffdccc;
+    --ink: #2c1820;
+    --shadow: 0 18px 45px rgba(64, 13, 36, .18);
 }
 
-.caudex-bold {
-  font-family: "Caudex", serif;
-  font-weight: 700;
-  font-style: normal;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--cream); color: var(--ink); font-family: 'Inter', sans-serif; line-height: 1.6; }
 
-.caudex-regular-italic {
-  font-family: "Caudex", serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.caudex-bold-italic {
-  font-family: "Caudex", serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-*/
-
-*{
-    padding: 0; /*define espaço interno*/
-    margin: 0; /*define espaço externo*/
-    box-sizing: border-box; /*define o tamanho da caixa*/
-}
-
-/*header------------------------------------------------------*/
-
-header{
-    width: 100%;
-    height: 90vh; /*vh significa Viewport Height - altura da area vis[ivel do navegador. */
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.2)), 
-    url('../imagen/istockphoto-2147672492-612x612.jpg');
-
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-
+.hero {
+    min-height: 88vh;
     position: relative;
+    overflow: hidden;
+    background: linear-gradient(110deg, rgba(64,13,36,.94), rgba(116,0,53,.63)), url('../imagen/istockphoto-2147672492-612x612.jpg') center/cover;
+    color: #fff;
 }
-
-/*nave ---------------------------------------------------------*/
-header nav#nav-esq{
-    width: 100%;
-    height: 150px;
-    background-color:#FFDCCC ;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-
-}
-
-header nav#nav-esq{
-    width: 20%;
-    height: 80px;
-    margin-left: 3rem;
-    display: flex;
-    align-items: center;
-
-}
-header nav#nav-esq div#logo img{
-    max-width: 80%;
-    max-height: 150px;
-    height: auto;
-}
-
-
-/* menu hamburguer */
-
-header nav#nav-esq ul#icone-menu{
-     display:none;/*DEIXAR EM COMENTARIO E DEPOIS POR NOVAMENTE PRA TIRAR ELE DA TELA*/
-}
-
-header nav#nav-esq ul#icone-menu li{
-    list-style: none;
-}
-
-header nav#nav-esq ul#icone-menu li ion-icon{
-    font-size: 50px;
-    color: #FFF;
-    margin-right: 2rem;
-}
-
-header nav#nav-esq ul#menu-principal{
-    margin-left: 5rem;
-
-    display: flex;
-    flex-flow: row wrap;
-}
-
-header nav#nav-esq ul#menu-principal li{
-    list-style: none;
-    margin-right: 2rem;
-}
-
-header nav#nav-esq ul#menu-principal a{ /* tira o sublinhado e coloca uma cor branca*/
-    text-decoration: none;
-    color: #FFF;
-    font-size: 150%;
-    text-shadow: 4px 6px 10px #000;
-    padding-bottom: 10px;
-    transition: .3s ease-out;
-}
-
-header nav#nav-esq ul#menu-principal li a:hover{
-    opacity: .6;
-} 
-
-/* menu hamburguer */
-
-header nav#nav-esq ul#icone-menu{
-    display: none;
-}
-
-header nav#nav-esq ul#icone-menu li{
-    list-style: none;
-}
-
-header nav#nav-esq ul#icone-menu li ion-icon{
-    font-size: 50px;
-    color: #FFF;
-    margin-right: 2rem;
-}
+.hero::after { content: ''; position: absolute; width: 340px; height: 340px; border: 1px solid rgba(255,255,255,.2); border-radius: 50%; right: -100px; bottom: -120px; }
+.navbar { width: min(1120px, 92%); height: 92px; margin: auto; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 2; }
+.brand { display: flex; align-items: center; gap: .75rem; color: #fff; font: 700 1.35rem 'Caudex', serif; text-decoration: none; }
+.brand-logo { width: 58px; height: 58px; border: 3px solid rgba(255,255,255,.85); border-radius: 50%; object-fit: cover; box-shadow: 0 5px 18px rgba(0,0,0,.3); }
+.menu { display: flex; align-items: center; gap: 2rem; list-style: none; }
+.menu a { color: #fff; text-decoration: none; font-size: .95rem; font-weight: 500; transition: color .25s, opacity .25s; }
+.menu a:hover, .menu a.active { color: var(--rose); }
+.menu-contact { border: 1px solid var(--rose); border-radius: 999px; padding: .65rem 1.2rem; }
+.menu-contact:hover { background: var(--rose); color: var(--wine-dark) !important; }
+.menu-toggle { display: none; border: 0; background: transparent; cursor: pointer; padding: .5rem; }
+.menu-toggle span { display: block; width: 27px; height: 2px; margin: 5px; background: #fff; transition: transform .25s, opacity .25s; }
+.hero-content { width: min(1120px, 92%); margin: 10vh auto 0; position: relative; z-index: 1; }
+.eyebrow { color: var(--rose); font-size: .78rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; margin-bottom: 1rem; }
+h1, h2 { font-family: 'Caudex', serif; line-height: 1.12; }
+h1 { max-width: 680px; font-size: clamp(3rem, 7vw, 6rem); }
+h1 span { color: var(--rose); }
+.hero-text { max-width: 500px; margin: 1.5rem 0 2rem; color: #ffe9e9; font-size: 1.08rem; }
+.button { display: inline-flex; align-items: center; gap: .9rem; border-radius: 999px; padding: .9rem 1.4rem; background: var(--rose); color: var(--wine-dark); font-weight: 700; text-decoration: none; transition: transform .25s, box-shadow .25s; }
+.button:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(255,153,175,.3); }
+.section { width: min(920px, 88%); margin: auto; padding: 7rem 0; text-align: center; }
+.section h2 { color: var(--wine); font-size: clamp(2rem, 4vw, 3.3rem); margin-bottom: 1rem; }
+.cards-section { width: min(1120px, 92%); }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
+.card { padding: 2rem; border-radius: 20px; background: #fff; box-shadow: var(--shadow); text-align: left; }
+.card span { color: var(--wine); font-size: 2rem; }.card h3 { color: var(--wine-dark); margin: .5rem 0; }.card p { color: #765c65; }
+.contact-section { padding-top: 3rem; padding-bottom: 7rem; }.contact-section .button { margin-top: 1.5rem; }
+footer { padding: 2rem; background: var(--wine-dark); color: #ffe9e9; text-align: center; font-size: .85rem; }
