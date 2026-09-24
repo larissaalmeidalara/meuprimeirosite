@@ -1,0 +1,153 @@
+/*
+#742400
+#401D0D
+#D98057
+#FFB999
+#FFDCCC
+#E7CCFF
+#CF99FF
+#FFCCE3
+#740035
+#400D24
+#FF99AF
+#C999FF
+
+font-family: "Grenze Gotisch", serif;
+font-optical-sizing: auto;
+font-weight: <weight>;
+font-style: normal;
+
+.miltonian-tattoo-regular {
+  font-family: "Miltonian Tattoo", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.caudex-regular {
+  font-family: "Caudex", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.caudex-bold {
+  font-family: "Caudex", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.caudex-regular-italic {
+  font-family: "Caudex", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.caudex-bold-italic {
+  font-family: "Caudex", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+*/
+
+*{
+    padding: 0; /*define espaço interno*/
+    margin: 0; /*define espaço externo*/
+    box-sizing: border-box; /*define o tamanho da caixa*/
+}
+
+/*header------------------------------------------------------*/
+
+header{
+    width: 100%;
+    height: 90vh; /*vh significa Viewport Height - altura da area vis[ivel do navegador. */
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.2)), 
+    url('../imagen/istockphoto-2147672492-612x612.jpg');
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    position: relative;
+}
+
+/*nave ---------------------------------------------------------*/
+header nav#nav-esq{
+    width: 100%;
+    height: 150px;
+    background-color:#FFDCCC ;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+}
+
+header nav#nav-esq{
+    width: 20%;
+    height: 80px;
+    margin-left: 3rem;
+    display: flex;
+    align-items: center;
+
+}
+header nav#nav-esq div#logo img{
+    max-width: 80%;
+    max-height: 150px;
+    height: auto;
+}
+
+
+/* menu hamburguer */
+
+header nav#nav-esq ul#icone-menu{
+     display:none;/*DEIXAR EM COMENTARIO E DEPOIS POR NOVAMENTE PRA TIRAR ELE DA TELA*/
+}
+
+header nav#nav-esq ul#icone-menu li{
+    list-style: none;
+}
+
+header nav#nav-esq ul#icone-menu li ion-icon{
+    font-size: 50px;
+    color: #FFF;
+    margin-right: 2rem;
+}
+
+header nav#nav-esq ul#menu-principal{
+    margin-left: 5rem;
+
+    display: flex;
+    flex-flow: row wrap;
+}
+
+header nav#nav-esq ul#menu-principal li{
+    list-style: none;
+    margin-right: 2rem;
+}
+
+header nav#nav-esq ul#menu-principal a{ /* tira o sublinhado e coloca uma cor branca*/
+    text-decoration: none;
+    color: #FFF;
+    font-size: 150%;
+    text-shadow: 4px 6px 10px #000;
+    padding-bottom: 10px;
+    transition: .3s ease-out;
+}
+
+header nav#nav-esq ul#menu-principal li a:hover{
+    opacity: .6;
+} 
+
+/* menu hamburguer */
+
+header nav#nav-esq ul#icone-menu{
+    display: none;
+}
+
+header nav#nav-esq ul#icone-menu li{
+    list-style: none;
+}
+
+header nav#nav-esq ul#icone-menu li ion-icon{
+    font-size: 50px;
+    color: #FFF;
+    margin-right: 2rem;
+}
